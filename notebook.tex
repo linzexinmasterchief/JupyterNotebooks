@@ -141,7 +141,7 @@
     \def\gt{>}
     \def\lt{<}
     % Document parameters
-    \title{Untitled}
+    \title{array\_tutorial}
     
     
     
@@ -280,168 +280,212 @@
     
 
     
+    \section{array index examples}\label{array-index-examples}
+
+    \subsection{basic operations}\label{basic-operations}
+
+    \subsubsection{define an empty array}\label{define-an-empty-array}
+
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Blah}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{a} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{]}
 \end{Verbatim}
 
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{brah}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-\end{Verbatim}
-
-
-    \subsection{lalala}\label{lalala}
+    \subsubsection{simplest array print}\label{simplest-array-print}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{lol}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-\end{Verbatim}
-
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{l+m+mh}{0xAF}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{a}
 \end{Verbatim}
 
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}1}]:} 175
+{\color{outcolor}Out[{\color{outcolor}2}]:} [1, 2, 3, 4, 5, 6, 7, 8, 9]
 \end{Verbatim}
             
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{n}{help}\PY{p}{(}\PY{p}{)}
-\end{Verbatim}
-
+    \subsubsection{simplest array index}\label{simplest-array-index}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{l+m+mo}{0o10}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}
 \end{Verbatim}
 
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}2}]:} 8
+{\color{outcolor}Out[{\color{outcolor}3}]:} 4
 \end{Verbatim}
             
+    \subsubsection{from the first(0) one to the third(2)
+one}\label{from-the-first0-one-to-the-third2-one}
+
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{l+m+mb}{0b1011010010}
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{3}\PY{p}{]}
 \end{Verbatim}
 
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}3}]:} 722
+{\color{outcolor}Out[{\color{outcolor}4}]:} [1, 2, 3]
 \end{Verbatim}
             
+    \subsubsection{the third(2) one to the first one, since the step length
+is 1, no element is
+selected}\label{the-third2-one-to-the-first-one-since-the-step-length-is-1-no-element-is-selected}
+
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{x}\PY{o}{=}\PY{n+nb}{input}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{x:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{:}\PY{l+m+mi}{0}\PY{p}{]}
 \end{Verbatim}
 
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-x:789sdg
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}5}]:} []
+\end{Verbatim}
+            
+    \subsection{to the end}\label{to-the-end}
 
-    \end{Verbatim}
+    \subsubsection{from the fourth(3) position to the last
+postion}\label{from-the-fourth3-position-to-the-last-postion}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{:}\PY{p}{]}
 \end{Verbatim}
 
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-
-        ---------------------------------------------------------------------------
-
-        TypeError                                 Traceback (most recent call last)
-
-        <ipython-input-2-a89b562e6092> in <module>()
-    ----> 1 print(x**2)
-    
-
-        TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
-
-    \end{Verbatim}
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}6}]:} [4, 5, 6, 7, 8, 9]
+\end{Verbatim}
+            
+    \subsubsection{from the first(0) postion to the third
+position}\label{from-the-first0-postion-to-the-third-position}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{int}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{a}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{3}\PY{p}{]}
 \end{Verbatim}
 
 
-    \begin{Verbatim}[commandchars=\\\{\}]
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}7}]:} [1, 2, 3]
+\end{Verbatim}
+            
+    \subsection{negative index}\label{negative-index}
 
-        ---------------------------------------------------------------------------
-
-        ValueError                                Traceback (most recent call last)
-
-        <ipython-input-3-760318186b08> in <module>()
-    ----> 1 print(int(x)**2)
-    
-
-        ValueError: invalid literal for int() with base 10: '789sdg'
-
-    \end{Verbatim}
+    \subsubsection{from the last third to
+end}\label{from-the-last-third-to-end}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{x}\PY{o}{=}\PY{n+nb}{input}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{x:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{a}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{:}\PY{p}{]}
 \end{Verbatim}
 
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-x:7952.2326
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}8}]:} [7, 8, 9]
+\end{Verbatim}
+            
+    \subsubsection{from the first to last
+fourth}\label{from-the-first-to-last-fourth}
 
-    \end{Verbatim}
-
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}5}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{float}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{a}\PY{p}{[}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{]}
 \end{Verbatim}
 
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-63238003.324502766
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}9}]:} [1, 2, 3, 4, 5, 6]
+\end{Verbatim}
+            
+    \subsection{step length}\label{step-length}
 
-    \end{Verbatim}
+    \subsubsection{step length = 1}\label{step-length-1}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}9}]:} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{100}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{:}
-            \PY{n+nb}{print}\PY{p}{(}\PY{n}{i}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{a}\PY{p}{[}\PY{p}{:}\PY{p}{:}\PY{l+m+mi}{1}\PY{p}{]}
 \end{Verbatim}
 
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-0
--10
--20
--30
--40
--50
--60
--70
--80
--90
-
-    \end{Verbatim}
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}10}]:} [1, 2, 3, 4, 5, 6, 7, 8, 9]
+\end{Verbatim}
+            
+    \subsubsection{step length = 2}\label{step-length-2}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{count} \PY{o}{=} \PY{l+m+mi}{0}
-        \PY{k}{while} \PY{k+kc}{True}\PY{p}{:}
-            \PY{k}{if} \PY{n}{count} \PY{o}{\PYZgt{}} \PY{l+m+mi}{10}\PY{p}{:}
-                \PY{k}{break}
-            \PY{n+nb}{print}\PY{p}{(}\PY{l+m+mi}{10} \PY{o}{*} \PY{n}{count}\PY{p}{)}
-            \PY{n}{count} \PY{o}{=} \PY{n}{count} \PY{o}{+} \PY{l+m+mi}{1}
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{a}\PY{p}{[}\PY{p}{:}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]}
 \end{Verbatim}
 
 
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}11}]:} [1, 3, 5, 7, 9]
+\end{Verbatim}
+            
+    \subsubsection{step length = -2}\label{step-length--2}
+
     \begin{Verbatim}[commandchars=\\\{\}]
-0
-10
-20
-30
-40
-50
-60
-70
-80
-90
-100
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{a}\PY{p}{[}\PY{p}{:}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{]}
+\end{Verbatim}
 
-    \end{Verbatim}
 
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}12}]:} [9, 7, 5, 3, 1]
+\end{Verbatim}
+            
+    \subsection{put everything together}\label{put-everything-together}
+
+    \subsubsection{same as a{[}0:3{]}}\label{same-as-a03}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{3}\PY{p}{:}\PY{l+m+mi}{1}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}13}]:} [1, 2, 3]
+\end{Verbatim}
+            
+    \subsubsection{from the fourth(3) to second(1) with step
+-1}\label{from-the-fourth3-to-second1-with-step--1}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{:}\PY{l+m+mi}{0}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}14}]:} [4, 3, 2]
+\end{Verbatim}
+            
+    \subsubsection{from third(2) to seventh(6) with step
+2}\label{from-third2-to-seventh6-with-step-2}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{7}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}15}]:} [3, 5, 7]
+\end{Verbatim}
+            
+    \subsubsection{from third to seventh with step
+3}\label{from-third-to-seventh-with-step-3}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{7}\PY{p}{:}\PY{l+m+mi}{3}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}16}]:} [3, 6]
+\end{Verbatim}
+            
+    \subsubsection{from eighth to fourth with step
+-3}\label{from-eighth-to-fourth-with-step--3}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{7}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{]}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}17}]:} [8, 5]
+\end{Verbatim}
+            
 
     % Add a bibliography block to the postdoc
     
